@@ -1,0 +1,367 @@
+@charset "UTF-8";
+
+/* reset */
+@import url(reset.css);
+
+/* 共有 -------------------------------------------------------- */
+body,
+#Home h1,
+#Latest,
+#Wrapper,
+#Work,
+#Work #Footer {
+	background-color: white;
+}
+
+a.Border {
+	border-bottom: dotted 1px;
+	border-color: black;
+}
+
+#Header dl,
+#Wrapper,
+#About #Share {
+	width: 100%;
+}
+
+/* ボディ --------------------------------------------------------------- */
+body {
+	width: 100%;
+	font-size: 12px;
+	text-align: center;
+	font-family: 'Dosis', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", cursive;
+	word-wrap: break-word;
+	letter-spacing: 3px;
+}
+
+body,
+a {
+	line-height: 2;
+	color: #231815;
+}
+
+body.Fixed {
+	position: fixed;
+	overflow-y: scroll;
+}
+
+.sp-nav {
+	display: none;
+}
+
+/* ロゴ --------------------------------------------------------------- */
+#Logo {
+	width: 100%;
+	height: 40vh;
+	position: relative;
+}
+
+#Logo,
+#Logo h1,
+#Logo h1 a {
+	background-color: white;
+}
+
+#Logo h1,
+#Logo h1 a {
+	display: inline;
+}
+
+#Logo h1 {
+	text-align: center;
+	font-size: 30px;
+	letter-spacing: 3px;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	left: 50%;
+	top: 90%;
+	font-size: 1.5rem;
+}
+
+#Logo h1 span {
+	padding-top: 5px;
+	font-size: 2.0rem;
+	letter-spacing: 2px;
+	color: #aaaaaa;
+}
+
+#Logo dl {
+	line-height: 1.5;
+	letter-spacing: 0;
+	position: absolute;
+	left: 30px;
+	bottom: 20px;
+}
+
+#Logo dl dt {
+	margin-bottom: 5px;
+
+}
+
+
+/* 包括 --------------------------------------------------------------- */
+#Wrapper {
+	width: 100%;
+	margin: 0 ;
+	padding-top: 10px;
+}
+
+.Works img {
+	width: 100%;
+	max-width: 512px;
+	height: auto;
+}
+
+/* heder --------------------------------------------------------------- */
+
+#Header {
+	width: 90%;
+	height: 100px;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	z-index: 99;
+	left: 0;
+	top: 0;
+	display: flex;
+	position: fixed;/* ウィンドウを基準に画面に固定 */
+	top: 0;/* 上下の固定位置を上から0pxにする */
+	left: 0;/* 左右の固定位置を左から0pxにする */
+	
+	
+}
+h1 {
+	font-size: 15px;
+}
+
+nav {
+	margin: 0 0 0 auto;
+}
+
+
+#Header ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 20px 10px 10px 10px;
+	position: absolute;
+	right: 10px;
+	bottom:10px;
+}
+
+
+#Header li{
+	padding-left:20px;
+}
+
+
+@media screen and (max-width: 640px) {
+	.pc-nav {
+		display: none;
+	}
+
+	.sp-nav {
+		z-index: 1;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		display: block;
+		width: 100%;
+		background: white;
+		opacity: 0;
+		transform: translateY(-100%);
+		transition: all .2s ease-in-out;
+	}
+
+	/* ボタン --------------------------------------------------------------- */
+	#hamburger {
+		position: relative;
+		display: block;
+		width: 30px;
+		height: 25px;
+		margin: 20px 20px 0 auto;
+
+	}
+
+	#hamburger span {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 2px;
+		background-color: black;
+		transform: translateY(-50%);
+	}
+
+	#hamburger::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color:black;
+	}
+
+	#hamburger::after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 70%;
+		height: 2px;
+		background-color:black;
+	}
+
+	/*スマホメニュー*/
+	.sp-nav ul {
+		width: 100%;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+
+	.sp-nav li {
+		margin: 0;
+		padding: 0;
+	}
+
+	.sp-nav li span {
+		font-size: 15px;
+		color:black;
+	}
+
+	.sp-nav li a,
+	.sp-nav li span {
+		display: block;
+		padding: 20px 0;
+	}
+
+	/*-閉じるアイコンー*/
+	.sp-nav .close {
+		position: relative;
+		padding-left: 20px;
+	}
+
+	.sp-nav .close::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		display: block;
+		width: 16px;
+		height: 1px;
+		background: black;
+		transform: rotate(45deg);
+	}
+
+	.sp-nav .close::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		display: block;
+		width: 16px;
+		height: 1px;
+		background: black;
+		transform: rotate(-45deg);
+	}
+
+	.toggle {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	.main-visual {
+		padding: 0 4%;
+	}
+
+	h2 {
+		line-height: 1.6;
+		text-align: center;
+	}
+}
+
+/* アバウト ------------------------------------------------------------ */
+#About {
+	width: 100%;
+	padding: 50px 0px 30px 0px;
+}
+
+#About #Profile {
+	width: 280px;
+	height: auto;
+	margin: 0px auto 0px auto;
+	padding: 0px 0px 0px 0px;
+	background-image: none;
+	position: relative;
+	overflow: hidden;
+}
+#About img {
+	width: 100%;
+	max-width: 512px;
+	height: auto;
+}
+
+#About #Profile h3 {
+	font-size: 150%;
+	letter-spacing: 3px;
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+#About #Profile p {
+	line-height: 1.5;
+	margin: 0px 0px 15px 0px;
+}
+
+#About #Profile ul {
+	float: none;
+}
+
+#About #Profile li {
+	float: none;
+	margin: 0px 0px 5px 0px;
+}
+
+#About #Share {
+	display: none;
+}
+
+/*footer*/
+
+.l-footer{
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+}
+
+
+#last img{
+	padding-bottom: 100px;
+	width:50vw;
+	height: auto;
+}
+
+
+
+/* work.html ------------------------------------------------------------ */
+
+
+.PIC{
+	width: 100%;
+	padding-top: 100px;
+}
+
+.PIC img {
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+}

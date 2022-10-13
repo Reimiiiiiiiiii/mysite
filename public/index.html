@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta property="og:type" content="website">
+	<title>Reimi's portfolio</title>
+	<link rel="icon" href="img/icon.ico">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="script.js" defer></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.js"
+		integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+	<script>
+		$(function () {
+			const hum = $('#hamburger, .close,.about, .works, .profile ,.instagram')
+			const nav = $('.sp-nav')
+			hum.on('click', function () {
+				nav.toggleClass('toggle');
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="Header">
+			<h1>
+				Hello!
+			</h1>
+			<nav class="pc-nav">
+				<ul>
+					<li><a href="#Logo">HOME</a></li>
+					<li><a href="#Wrapper">WORKS</a></li>
+					<li><a href="#Profile">PROFILE</a></li>
+					<li><a href="https://www.instagram.com/reimi_iwashita/">INSTAGRAM</a></li>
+				</ul>
+			</nav>
+			<nav class="sp-nav">
+				<ul>
+					<li class="about"><a href="#Logo">HOME</a></li>
+					<li class="works"><a href="#Wrapper">WORKS</a></li>
+					<li class="profile"><a href="#Profile">PROFILE</a></li>
+					<li class="instagram"><a href="https://www.instagram.com/reimi_iwashita/">INSTAGRAM</a></li>
+					<li class="close"><span>CLOSE</span></li>
+				</ul>
+			</nav>
+			<div id="hamburger">
+				<span></span>
+			</div>
+	</div>
+
+	<div id="Logo">
+		<h1>
+			<a href="index.html">Reimi's playground
+			</a>
+			<span style="-ms-filter:'alpha(opacity=0)'; filter:alpha(opacity=0); opacity:0;">
+				<script src="js/log.js"></script>
+			</span>
+
+
+		</h1>
+	</div>
+
+	<div id="Wrapper">
+		<div class="Works">
+			<a href="work.html"><img src="img/flower.jpg" alt="flower" height="500px" width="500px"></a>
+			<p>Please click the flower<br> to see my works!</p>
+		</div>
+	</div>
+
+	<div id="About">
+		<div id="Profile">
+
+
+			<img src="img/girl.jpg" alt="girl" height="400px" width="330px">
+			<h3>Reimi</h3>
+			<p>
+				このサイトは私の遊び場です<br>
+				好きなこと、楽しいこと、新しいこと<br>
+			</p>
+
+		</div>
+	</div>
+
+
+	
+	
+	<footer class="l-footer"><small class="p-copyright">&copy; Reimi </small></footer>
+
+</body>
+
+</html>

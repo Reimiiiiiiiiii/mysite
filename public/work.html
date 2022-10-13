@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta property="og:type" content="website">
+	<title>Reimi's portfolio</title>
+	<link rel="icon" href="img/icon.ico">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="script.js" defer></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.js"
+		integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+	<script>
+		$(function () {
+			const hum = $('#hamburger, .close,.about, .works, .profile ,.instagram')
+			const nav = $('.sp-nav')
+			hum.on('click', function () {
+				nav.toggleClass('toggle');
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="Header">
+		<h1>
+			MY WORKS!
+		</h1>
+		<nav class="pc-nav">
+			<ul>
+				<li><a href="index.html#Logo">HOME</a></li>
+				<li><a href="index.html#Wrapper">WORKS</a></li>
+				<li><a href="index.html#Profile">PROFILE</a></li>
+				<li><a href="https://www.instagram.com/reimi_iwashita/">INSTAGRAM</a></li>
+			</ul>
+		</nav>
+		<nav class="sp-nav">
+			<ul>
+				<li class="about"><a href="index.html#Logo">HOME</a></li>
+				<li class="works"><a href="index.html#Wrapper">WORKS</a></li>
+				<li class="profile"><a href="index.html#Profile">PROFILE</a></li>
+				<li class="instagram"><a href="https://www.instagram.com/reimi_iwashita/">INSTAGRAM</a></li>
+				<li class="close"><span>CLOSE</span></li>
+			</ul>
+		</nav>
+		<div id="hamburger">
+			<span></span>
+		</div>
+	</div>
+	<div class="PIC">
+		<ul style="list-style: disc;">
+			<li><img src="img/girl2.jpg"></li>
+			<li><img src="img/pic1.png"></li>
+			<li><img src="img/sea.jpg"></li>
+		</ul>
+	
+	</div>
+
+	<footer class="l-footer"><small class="p-copyright">&copy; Reimi </small></footer>
+<body>
+
+
+
+</html>
